@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paneshell Privacy Policy</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<header><a href="../">Paneshell</a></header>
+<nav class="lang">日本語 · <a href="#en">English</a></nav>
+
+<h1>プライバシーポリシー</h1>
+<p class="updated">最終更新日：2026年10月18日</p>
+<p>Paneshell（以下「本アプリ」）は、SSH でサーバーやコンピューターに接続するための iOS アプリです。本アプリにおける利用者の情報の取り扱いについて説明します。</p>
+
+<h2>1. 収集する情報</h2>
+<p>本アプリは、利用者の個人情報や利用状況を収集しません。開発者のサーバーに情報を送信することもありません。広告、アクセス解析、クラッシュレポートの外部サービスも使用していません。</p>
+
+<h2>2. 端末内に保存する情報</h2>
+<p>本アプリの機能のため、次の情報を利用者の iPhone（または iPad）の中だけに保存します。</p>
+<ul>
+  <li>接続先の情報（名前、ホスト名、ユーザー名、ポート番号、tmux の設定）</li>
+  <li>SSH の秘密鍵、および保存を選んだパスワード（iOS のキーチェーンに保存し、設定により Face ID などの本人確認で保護します）</li>
+  <li>接続したことのあるサーバーのホスト鍵（なりすまし防止のため）</li>
+  <li>スニペットとアプリの設定</li>
+</ul>
+<p>これらの情報は、本アプリを削除すると端末から削除されます（キーチェーンの項目は、iOS の仕様により削除されるまで時間がかかる場合があります）。</p>
+
+<h2>3. 通信について</h2>
+<p>本アプリは、利用者が設定した接続先にのみ、SSH で接続します。通信内容は SSH により暗号化されます。接続先のサーバーで取り扱われる情報については、そのサーバーの管理者の方針に従います。</p>
+<p>接続先から届いたログイン用の URL（Tailscale の認証画面など）や、ターミナル上のリンクは、開く前に URL を表示して確認したうえで、Safari で開きます。</p>
+<p>画像を送る機能では、利用者が選んだ画像を接続先の <code>~/.paneshell/images</code> に保存します（7日を過ぎたものは、次に送るときに削除します）。画面に出た画像を開く機能では、利用者が開いた画像を接続先から読み込み、表示のために端末内の一時的な場所にだけ保存します。</p>
+<p>接続先のプログラムが、この iPhone のクリップボードに文字をコピーすることがあります（設定でオフにできます）。コピーされた内容が本アプリの外に送信されることはありません。</p>
+
+<h2>4. アプリ内課金</h2>
+<p>本アプリの有料機能（Paneshell Pro）の購入と支払いは、Apple が処理します。本アプリは、購入済みかどうかを端末内で Apple の仕組みを使って確認するだけで、支払い情報などを受け取ることはありません。</p>
+
+<h2>5. 第三者への提供</h2>
+<p>本アプリは、利用者の情報を第三者に提供しません。</p>
+
+<h2>6. 本ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、このページでお知らせし、最終更新日を改めます。</p>
+
+<h2>7. お問い合わせ</h2>
+<p>本ポリシーに関するお問い合わせは、<a href="mailto:paneshell.support@gmail.com">paneshell.support@gmail.com</a> までお願いします。</p>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: October 18, 2026</p>
+<p>Paneshell (“the App”) is an SSH client for iOS. This policy explains how the App handles your information.</p>
+
+<h2>1. Data collection</h2>
+<p>The App does not collect any personal information or usage data, and does not send any data to the developer. It does not use advertising, analytics, or third-party crash reporting services.</p>
+
+<h2>2. Data stored on your device</h2>
+<p>To provide its features, the App stores the following only on your iPhone or iPad:</p>
+<ul>
+  <li>Host settings (name, hostname, user name, port, tmux settings)</li>
+  <li>SSH private keys and any passwords you choose to save (stored in the iOS Keychain and optionally protected by Face ID)</li>
+  <li>Host keys of servers you have connected to (to detect impersonation)</li>
+  <li>Snippets and app settings</li>
+</ul>
+<p>This data is removed when you delete the App (Keychain items may take some time to be removed, depending on iOS).</p>
+
+<h2>3. Network</h2>
+<p>The App connects only to the hosts you configure, over SSH, which encrypts the connection. Information handled on those servers is subject to the policies of their administrators.</p>
+<p>Login URLs sent by a server (such as Tailscale authentication) and links shown in the terminal are opened in Safari after the App shows you the URL and asks for confirmation.</p>
+<p>When you send an image, it is saved on the server in <code>~/.paneshell/images</code> (images older than 7 days are deleted the next time you send one). When you open an image shown in the terminal, the App reads it from the server and keeps it only in a temporary location on your device for viewing.</p>
+<p>Programs on the server may copy text to your device’s clipboard (this can be turned off in Settings). The copied text is not sent anywhere by the App.</p>
+
+<h2>4. In-app purchases</h2>
+<p>Purchases of Paneshell Pro are processed by Apple. The App only checks on the device, using Apple’s StoreKit, whether you have purchased it. The App does not receive your payment information.</p>
+
+<h2>5. Sharing</h2>
+<p>The App does not share your information with third parties.</p>
+
+<h2>6. Changes to this policy</h2>
+<p>If this policy changes, the update will be posted on this page with a new “Last updated” date.</p>
+
+<h2>7. Contact</h2>
+<p>For questions about this policy, please contact <a href="mailto:paneshell.support@gmail.com">paneshell.support@gmail.com</a>.</p>
+</section>
+</main>
+</body>
+</html>

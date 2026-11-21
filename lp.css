@@ -17,6 +17,7 @@ body {
   color: var(--text);
   font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip; /* 装飾が画面の外へ出ても横スクロールさせない */
 }
 a { color: var(--accent); }
 img { display: block; max-width: 100%; height: auto; }
@@ -264,6 +265,7 @@ footer { border-top: 1px solid var(--line); text-align: center; padding: 36px 20
   .hero { grid-template-columns: 1fr; padding-top: 48px; text-align: left; }
   .hero-shot .phone { max-width: 260px; }
   .typing { min-width: min(18em, 100%); font-size: 13px; }
+  .ring { width: min(120%, calc(100vw - 24px)); }
   .blob { filter: blur(60px); }
   .flow ol { grid-template-columns: 1fr 1fr; }
   .feature { grid-template-columns: 1fr; gap: 32px; padding: 44px 0; }

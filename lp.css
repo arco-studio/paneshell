@@ -57,6 +57,12 @@ p { margin: 0; overflow-wrap: anywhere; }
 .btn.ghost:hover { box-shadow: inset 0 0 0 1px var(--accent), 0 8px 24px rgba(94, 203, 167, 0.18); }
 .cta-note a { color: var(--muted); }
 
+/* App Store badge (公式バッジは加工しない) */
+.badge { display: inline-block; line-height: 0; border-radius: 10px; transition: transform .15s ease, box-shadow .15s ease; }
+.badge img { height: 52px; width: auto; }
+.badge:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45); }
+.pricing .badge img { height: 56px; }
+
 /* mac app */
 .macapp { max-width: 1080px; margin: 0 auto; padding: 40px 20px 8px; }
 .macapp-card {

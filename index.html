@@ -13,6 +13,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0f1417">
 <meta name="apple-itunes-app" content="app-id=6824497575">
+<link rel="alternate" hreflang="ja" href="https://arco-studio.github.io/paneshell/">
+<link rel="alternate" hreflang="en" href="https://arco-studio.github.io/paneshell/en/">
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="lp.css">
@@ -29,20 +31,22 @@
   <a class="brand" href="./"><img src="assets/icon.png" alt="" width="28" height="28">Paneshell</a>
   <div class="top-links">
     <a href="#features">機能</a>
+    <a href="#mac">Mac</a>
     <a href="#pricing">料金</a>
     <a href="support/">サポート</a>
-    <a href="#en" lang="en">English</a>
+    <a href="en/" lang="en" hreflang="en">English</a>
   </div>
 </nav>
 
 <header class="hero">
   <div class="hero-text">
     <p class="eyebrow">SSH · tmux · Mac画面共有</p>
-    <div class="typing" aria-hidden="true"><span class="prompt">❯</span> <span id="typed"></span><span class="caret"></span></div>
+    <div class="typing" aria-hidden="true" data-lines='tmux attach -t demo|claude "天気予報の画面を作って"|git status|codex "テストを直して"|open ~/.paneshell/images/forecast.png'><span class="prompt">❯</span> <span id="typed"></span><span class="caret"></span></div>
     <h1>Macの作業を、<br><span>iPhoneから続ける。</span></h1>
     <p class="lead">Paneshellは、Macで動くClaude CodeやCodexの進み具合を確かめ、次の指示を送れるSSHターミナルです。見た目を確かめたいときは、そのままMacの画面を開けます。</p>
     <div class="cta">
       <a class="btn shine" href="https://apps.apple.com/jp/app/paneshell-ssh-terminal/id6824497575">App Storeで見る</a>
+      <a class="btn ghost" href="#mac"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5l.5 2H17v2H7v-2h2.5l.5-2H5a2 2 0 0 1-2-2V5zm2 0v10h14V5H5z"/></svg>Mac用アプリ</a>
       <span class="cta-note">iPhone・iPad対応 · 無料で始められます</span>
     </div>
   </div>
@@ -111,6 +115,26 @@
   </section>
 </main>
 
+<section class="macapp" id="mac">
+  <div class="reveal macapp-card">
+    <div class="macapp-icon"><img src="assets/icon.png" alt="" width="96" height="96"><span>for Mac</span></div>
+    <div class="macapp-text">
+      <p class="eyebrow">Paneshell Host</p>
+      <h2>Mac用アプリで、画面共有をもっと速く。</h2>
+      <p>Paneshell HostをMacに入れると、画面共有の「高速モード」が使えます。Macの画面を動画として送るので動きが滑らかになり、Macの音も聞けます。メニューバーに常駐する小さなアプリです。</p>
+      <ul class="macapp-points">
+        <li>iPhoneのPaneshellから、画面共有のメニューでワンタップで入れられます</li>
+        <li>手で入れたい場合は、下のボタンから.dmgをダウンロード</li>
+        <li>Developer IDで署名し、Appleの公証を受けています</li>
+      </ul>
+      <div class="cta">
+        <a class="btn shine" href="https://github.com/arco-studio/paneshell/releases/download/host-v0.1.0/PaneshellHost-0.1.0.dmg"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.2l3.3-3.3 1.4 1.4L12 16 6.3 10.3l1.4-1.4L11 12.2V3zM4 18h16v2H4z"/></svg>Mac版をダウンロード</a>
+        <span class="cta-note">Paneshell Host 0.1.0 · macOS 14以降 · <a href="https://github.com/arco-studio/paneshell/releases">リリース一覧</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="setup">
   <h2>はじめかた</h2>
   <ol>
@@ -148,18 +172,10 @@
   <a class="btn shine" href="https://apps.apple.com/jp/app/paneshell-ssh-terminal/id6824497575">App Storeで入手</a>
 </section>
 
-<section class="en" id="en" lang="en">
-  <h2>Pick up your work from your iPhone.</h2>
-  <p>Paneshell is an SSH terminal for iPhone and iPad. Check on Claude Code or Codex running on your Mac or Linux server, send the next instruction, and rejoin your tmux session anytime. When you need to see the result, open your Mac screen over SSH using built-in macOS Screen Sharing.</p>
-  <p>The free version includes one host, three image sends, and 30 minutes of Mac screen control. Paneshell Pro is a one-time purchase with no limits.</p>
-  <p><a class="btn shine" href="https://apps.apple.com/us/app/paneshell-ssh-terminal/id6824497575">View on the App Store</a></p>
-  <p class="small"><a href="support/#en">Support</a> · <a href="privacy/#en">Privacy Policy</a></p>
-</section>
-
 <footer>
   <p><a href="support/">サポート・お問い合わせ</a> · <a href="privacy/">プライバシーポリシー</a></p>
   <p class="small">Claude Code、Codex、Tailscaleは各社の製品であり、Paneshellとは関係ありません。Mac、iPhone、iPad、App StoreはApple Inc.の商標です。</p>
-  <p class="small">© 2026 arco studio</p>
+  <p class="small">© 2026 ArcoStudio</p>
 </footer>
 
 <script src="lp.js" defer></script>

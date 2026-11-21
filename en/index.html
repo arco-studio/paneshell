@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paneshell — Pick up your Mac work from your iPhone</title>
+<meta name="description" content="Paneshell is an SSH terminal for iPhone and iPad. Check on Claude Code or Codex running on your Mac, send the next instruction, rejoin your tmux session, and open your Mac screen when you need it.">
+<meta property="og:title" content="Paneshell — Pick up your Mac work from your iPhone">
+<meta property="og:description" content="An SSH terminal for iPhone and iPad with tmux and Mac Screen Sharing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arco-studio.github.io/paneshell/en/">
+<meta property="og:image" content="https://arco-studio.github.io/paneshell/assets/icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f1417">
+<meta name="apple-itunes-app" content="app-id=6824497575">
+<link rel="alternate" hreflang="ja" href="https://arco-studio.github.io/paneshell/">
+<link rel="alternate" hreflang="en" href="https://arco-studio.github.io/paneshell/en/">
+<link rel="icon" href="../assets/icon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../lp.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="grid-bg"></div>
+  <canvas id="glyphs"></canvas>
+</div>
+
+<nav class="top">
+  <a class="brand" href="./"><img src="../assets/icon.png" alt="" width="28" height="28">Paneshell</a>
+  <div class="top-links">
+    <a href="#features">Features</a>
+    <a href="#mac">Mac</a>
+    <a href="#pricing">Pricing</a>
+    <a href="../support/#en">Support</a>
+    <a href="../" lang="ja" hreflang="ja">日本語</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">SSH · tmux · Mac Screen Sharing</p>
+    <div class="typing" aria-hidden="true" data-lines='tmux attach -t demo|claude "build a weather forecast screen"|git status|codex "fix the failing tests"|open ~/.paneshell/images/forecast.png'><span class="prompt">❯</span> <span id="typed"></span><span class="caret"></span></div>
+    <h1>Your Mac work,<br><span>now on your iPhone.</span></h1>
+    <p class="lead">Paneshell is an SSH terminal for checking on Claude Code or Codex running on your Mac and sending the next instruction. When you need to see how things look, open your Mac screen right from the app.</p>
+    <div class="cta">
+      <a class="btn shine" href="https://apps.apple.com/us/app/paneshell-ssh-terminal/id6824497575">View on the App Store</a>
+      <a class="btn ghost" href="#mac"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5l.5 2H17v2H7v-2h2.5l.5-2H5a2 2 0 0 1-2-2V5zm2 0v10h14V5H5z"/></svg>Mac app</a>
+      <span class="cta-note">For iPhone and iPad · Free to start</span>
+    </div>
+  </div>
+  <div class="hero-shot" id="tilt">
+    <div class="ring"></div>
+    <figure class="phone"><img src="../assets/en/1-claude.jpg" alt="Claude Code output shown in Paneshell" width="660" height="1434"></figure>
+  </div>
+</header>
+
+<section class="flow">
+  <ol>
+    <li class="reveal"><b>Start on your Mac</b><span>Run Claude Code or Codex inside tmux</span></li>
+    <li class="reveal"><b>Check in on the go</b><span>Rejoin the session from your iPhone and see the progress</span></li>
+    <li class="reveal"><b>Send the next step</b><span>Extra keys and snippets make typing on a phone quick</span></li>
+    <li class="reveal"><b>See the result</b><span>Open your Mac screen to check the app you built</span></li>
+  </ol>
+</section>
+
+<main id="features">
+  <section class="feature">
+    <div class="reveal feature-text">
+      <p class="eyebrow">01 · tmux</p>
+      <h2>Step away. <span>Your work keeps going.</span></h2>
+      <p>Connect to your Mac or Linux server over SSH and return to the tmux session you choose. Switch windows with tabs, and split or resize panes right from the screen. If the connection drops, reconnect to work that kept running on your host.</p>
+    </div>
+    <figure class="reveal phone"><img src="../assets/en/3-split.jpg" alt="Resizing tmux panes in Paneshell" loading="lazy" width="660" height="1434"></figure>
+  </section>
+
+  <section class="feature reverse">
+    <div class="reveal feature-text">
+      <p class="eyebrow">02 · Input</p>
+      <h2>Instructions, <span>easy from a phone.</span></h2>
+      <p>Send Esc, Tab, Ctrl, arrows and more from the extra keys bar, or use the floating keypad over the terminal. Save frequently used prompts and commands as snippets and send them with a tap.</p>
+    </div>
+    <figure class="reveal phone"><img src="../assets/en/4-snippets.jpg" alt="Saved snippets list" loading="lazy" width="660" height="1434"></figure>
+  </section>
+
+  <section class="feature wide">
+    <div class="reveal feature-text">
+      <p class="eyebrow">03 · Screen Sharing</p>
+      <h2>Your Mac screen, in your hand.</h2>
+      <p>Paneshell connects to built-in macOS Screen Sharing through an SSH tunnel. Tap to click, pinch to zoom, and scroll with two fingers, or switch to trackpad mode and move the pointer. Your screen never passes through a Paneshell relay server.</p>
+    </div>
+    <figure class="reveal mac"><img src="../assets/mac-screen.jpg" alt="A Mac desktop shown on iPhone" loading="lazy" width="1100" height="608"></figure>
+  </section>
+
+  <section class="grid">
+    <div class="reveal card">
+      <img src="../assets/en/5-image.jpg" alt="A generated image opened from the terminal" loading="lazy" width="660" height="1434" style="object-position: center 45%">
+      <h3>Send and open images</h3>
+      <p>Send photos and files to your host. Open images your AI agent creates straight from paths shown in the terminal.</p>
+    </div>
+    <div class="reveal card">
+      <img src="../assets/en/2-hosts.jpg" alt="Saved hosts list" loading="lazy" width="660" height="1434">
+      <h3>Saved hosts</h3>
+      <p>Public key and password authentication, with Tailscale connections supported. Pick a working folder while browsing your host.</p>
+    </div>
+    <div class="reveal card text-only">
+      <h3>Hear when it needs you</h3>
+      <p>A sound and vibration let you know when Claude Code or Codex is waiting for approval or has finished (while the app is open).</p>
+      <h3>Themes</h3>
+      <p>A clear default theme, plus Classic themes with Pro.</p>
+      <h3>Made for iPad, too</h3>
+      <p>Lay out panes side by side on the larger screen.</p>
+    </div>
+  </section>
+</main>
+
+<section class="macapp" id="mac">
+  <div class="reveal macapp-card">
+    <div class="macapp-icon"><img src="../assets/icon.png" alt="" width="96" height="96"><span>for Mac</span></div>
+    <div class="macapp-text">
+      <p class="eyebrow">Paneshell Host</p>
+      <h2>Faster screen sharing with the Mac app.</h2>
+      <p>Install Paneshell Host on your Mac to unlock Fast mode for screen sharing. Your Mac screen streams as video for smoother motion, and you can hear your Mac’s audio too. It’s a small app that lives in the menu bar.</p>
+      <ul class="macapp-points">
+        <li>Install it with one tap from the screen sharing menu in Paneshell on your iPhone</li>
+        <li>Prefer to install it yourself? Download the .dmg below</li>
+        <li>Signed with Developer ID and notarized by Apple</li>
+      </ul>
+      <div class="cta">
+        <a class="btn shine" href="https://github.com/arco-studio/paneshell/releases/download/host-v0.1.0/PaneshellHost-0.1.0.dmg"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.2l3.3-3.3 1.4 1.4L12 16 6.3 10.3l1.4-1.4L11 12.2V3zM4 18h16v2H4z"/></svg>Download for Mac</a>
+        <span class="cta-note">Paneshell Host 0.1.0 · macOS 14 or later · <a href="https://github.com/arco-studio/paneshell/releases">All releases</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="setup">
+  <h2>Getting started</h2>
+  <ol>
+    <li class="reveal"><b>Prepare your Mac</b>Turn on Remote Login in System Settings → General → Sharing. To control the screen, turn on Screen Sharing too.</li>
+    <li class="reveal"><b>Add your host</b>Add your Mac in Paneshell and set up SSH authentication. You can also set it to attach to tmux.</li>
+    <li class="reveal"><b>Connect and work</b>Drive Claude Code or Codex from the terminal. Open “Control Mac Screen” whenever you need it.</li>
+  </ol>
+  <p class="small">To connect while you’re away, your Mac must be reachable over SSH (for example, with Tailscale).</p>
+</section>
+
+<section class="pricing" id="pricing">
+  <h2>Try it free. Buy once if you love it.</h2>
+  <div class="reveal plans">
+    <div class="reveal plan">
+      <h3>Free</h3>
+      <ul>
+        <li>SSH, tmux, extra keys, snippets</li>
+        <li>1 host</li>
+        <li>3 image sends</li>
+        <li>30 minutes of Mac screen control in total</li>
+      </ul>
+    </div>
+    <div class="reveal plan pro">
+      <h3>Paneshell Pro <small>One-time</small></h3>
+      <ul>
+        <li>Everything in Free</li>
+        <li>Unlimited hosts</li>
+        <li>Unlimited image sends</li>
+        <li>Unlimited Mac screen control</li>
+        <li>Classic themes</li>
+      </ul>
+      <p class="small">No subscription.</p>
+    </div>
+  </div>
+  <a class="btn shine" href="https://apps.apple.com/us/app/paneshell-ssh-terminal/id6824497575">Get it on the App Store</a>
+</section>
+
+<footer>
+  <p><a href="../support/#en">Support</a> · <a href="../privacy/#en">Privacy Policy</a> · <a href="../" lang="ja" hreflang="ja">日本語</a></p>
+  <p class="small">Claude Code, Codex, and Tailscale are products of their respective companies and are not affiliated with Paneshell. Mac, iPhone, iPad, and App Store are trademarks of Apple Inc.</p>
+  <p class="small">© 2026 ArcoStudio</p>
+</footer>
+
+<script src="../lp.js" defer></script>
+</body>
+</html>

@@ -37,13 +37,8 @@
 
   // 見出し上のタイピング
   const typed = document.getElementById('typed');
-  const lines = [
-    'tmux attach -t demo',
-    'claude "天気予報の画面を作って"',
-    'git status',
-    'codex "テストを直して"',
-    'open ~/.paneshell/images/forecast.png',
-  ];
+  const box = document.querySelector('.typing');
+  const lines = ((box && box.dataset.lines) || 'tmux attach -t demo').split('|');
   if (typed) {
     if (reduce) { typed.textContent = lines[0]; }
     else {

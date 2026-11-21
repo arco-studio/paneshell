@@ -16,8 +16,14 @@
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="lp.css">
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
+<div class="bg" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="grid-bg"></div>
+  <canvas id="glyphs"></canvas>
+</div>
 
 <nav class="top">
   <a class="brand" href="./"><img src="assets/icon.png" alt="" width="28" height="28">Paneshell</a>
@@ -32,67 +38,69 @@
 <header class="hero">
   <div class="hero-text">
     <p class="eyebrow">SSH · tmux · Mac画面共有</p>
+    <div class="typing" aria-hidden="true"><span class="prompt">❯</span> <span id="typed"></span><span class="caret"></span></div>
     <h1>Macの作業を、<br><span>iPhoneから続ける。</span></h1>
     <p class="lead">Paneshellは、Macで動くClaude CodeやCodexの進み具合を確かめ、次の指示を送れるSSHターミナルです。見た目を確かめたいときは、そのままMacの画面を開けます。</p>
     <div class="cta">
-      <a class="btn" href="https://apps.apple.com/jp/app/paneshell-ssh-terminal/id6824497575">App Storeで見る</a>
+      <a class="btn shine" href="https://apps.apple.com/jp/app/paneshell-ssh-terminal/id6824497575">App Storeで見る</a>
       <span class="cta-note">iPhone・iPad対応 · 無料で始められます</span>
     </div>
   </div>
-  <div class="hero-shot">
+  <div class="hero-shot" id="tilt">
+    <div class="ring"></div>
     <figure class="phone"><img src="assets/1-claude.jpg" alt="PaneshellでClaude Codeの出力を表示している画面" width="660" height="1434"></figure>
   </div>
 </header>
 
 <section class="flow">
   <ol>
-    <li><b>Macで依頼</b><span>Claude CodeやCodexをtmuxの中で動かしておく</span></li>
-    <li><b>外出先で確認</b><span>iPhoneからセッションに戻り、進み具合を見る</span></li>
-    <li><b>次の指示を送る</b><span>補助キーやスニペットで、スマホからでも素早く</span></li>
-    <li><b>画面で確かめる</b><span>出来上がったアプリはMacの画面を開いて確認</span></li>
+    <li class="reveal"><b>Macで依頼</b><span>Claude CodeやCodexをtmuxの中で動かしておく</span></li>
+    <li class="reveal"><b>外出先で確認</b><span>iPhoneからセッションに戻り、進み具合を見る</span></li>
+    <li class="reveal"><b>次の指示を送る</b><span>補助キーやスニペットで、スマホからでも素早く</span></li>
+    <li class="reveal"><b>画面で確かめる</b><span>出来上がったアプリはMacの画面を開いて確認</span></li>
   </ol>
 </section>
 
 <main id="features">
   <section class="feature">
-    <div class="feature-text">
+    <div class="reveal feature-text">
       <p class="eyebrow">01 · tmux</p>
       <h2>離れても、作業はそのまま。</h2>
       <p>MacやLinuxにSSHで接続し、指定したtmuxセッションへ戻れます。ウインドウはタブで切り替え、ペインの分割やサイズの調整も画面から。通信が途切れても、接続先で動き続けている作業に再接続できます。</p>
     </div>
-    <figure class="phone"><img src="assets/3-split.jpg" alt="tmuxのペインの大きさを調整している画面" loading="lazy" width="660" height="1434"></figure>
+    <figure class="reveal phone"><img src="assets/3-split.jpg" alt="tmuxのペインの大きさを調整している画面" loading="lazy" width="660" height="1434"></figure>
   </section>
 
   <section class="feature reverse">
-    <div class="feature-text">
+    <div class="reveal feature-text">
       <p class="eyebrow">02 · 入力</p>
       <h2>スマホでも、<span>指示を送りやすく。</span></h2>
       <p>Esc・Tab・Ctrl・矢印などは補助キーバーから。画面に重ねて使える浮かせるキーパッドもあります。よく使う指示やコマンドはスニペットに保存して、ワンタップで送信できます。</p>
     </div>
-    <figure class="phone"><img src="assets/4-snippets.jpg" alt="保存したスニペットの一覧" loading="lazy" width="660" height="1434"></figure>
+    <figure class="reveal phone"><img src="assets/4-snippets.jpg" alt="保存したスニペットの一覧" loading="lazy" width="660" height="1434"></figure>
   </section>
 
   <section class="feature wide">
-    <div class="feature-text">
+    <div class="reveal feature-text">
       <p class="eyebrow">03 · 画面共有</p>
       <h2>Macの画面も、そのまま手元に。</h2>
       <p>macOS標準の「画面共有」にSSHトンネル経由で接続します。タップでクリック、ピンチで拡大、2本指でスクロール。トラックパッドのようにポインタを動かす方式にも切り替えられます。画面の通信に独自の中継サーバーは使いません。</p>
     </div>
-    <figure class="mac"><img src="assets/mac-screen.jpg" alt="iPhoneに表示したMacのデスクトップ" loading="lazy" width="1100" height="608"></figure>
+    <figure class="reveal mac"><img src="assets/mac-screen.jpg" alt="iPhoneに表示したMacのデスクトップ" loading="lazy" width="1100" height="608"></figure>
   </section>
 
   <section class="grid">
-    <div class="card">
+    <div class="reveal card">
       <img src="assets/5-image.jpg" alt="ターミナルから生成画像を開いた画面" style="object-position: center 45%" loading="lazy" width="660" height="1434">
       <h3>画像を送る・開く</h3>
       <p>写真やファイルを接続先へ送信。AIが作った画像は、ターミナルに表示されたパスから開けます。</p>
     </div>
-    <div class="card">
+    <div class="reveal card">
       <img src="assets/2-hosts.jpg" alt="保存したホストの一覧" loading="lazy" width="660" height="1434">
       <h3>ホストを保存</h3>
       <p>公開鍵・パスワード認証に対応。Tailscale経由の接続も使えます。作業フォルダは接続先を見ながら選べます。</p>
     </div>
-    <div class="card text-only">
+    <div class="reveal card text-only">
       <h3>承認待ちを音で知らせる</h3>
       <p>Claude CodeやCodexの承認待ちや回答の完了を、音と振動でお知らせします（アプリを開いている間）。</p>
       <h3>テーマを選べる</h3>
@@ -106,17 +114,17 @@
 <section class="setup">
   <h2>はじめかた</h2>
   <ol>
-    <li><b>Macの準備</b>「システム設定 → 一般 → 共有」で「リモートログイン」をオン。画面操作を使うなら「画面共有」もオンにします。</li>
-    <li><b>ホストを登録</b>PaneshellでMacを登録し、SSHの認証方法を設定します。tmuxへのアタッチもアプリから設定できます。</li>
-    <li><b>接続して作業</b>ターミナルからClaude CodeやCodexを操作。必要になったら「Macの画面を操作」を開きます。</li>
+    <li class="reveal"><b>Macの準備</b>「システム設定 → 一般 → 共有」で「リモートログイン」をオン。画面操作を使うなら「画面共有」もオンにします。</li>
+    <li class="reveal"><b>ホストを登録</b>PaneshellでMacを登録し、SSHの認証方法を設定します。tmuxへのアタッチもアプリから設定できます。</li>
+    <li class="reveal"><b>接続して作業</b>ターミナルからClaude CodeやCodexを操作。必要になったら「Macの画面を操作」を開きます。</li>
   </ol>
   <p class="small">外出先から接続するには、MacへSSHで到達できるネットワーク（Tailscaleなど）が必要です。</p>
 </section>
 
 <section class="pricing" id="pricing">
   <h2>無料で試して、気に入ったら買い切りで。</h2>
-  <div class="plans">
-    <div class="plan">
+  <div class="reveal plans">
+    <div class="reveal plan">
       <h3>無料版</h3>
       <ul>
         <li>SSH・tmux・補助キー・スニペット</li>
@@ -125,7 +133,7 @@
         <li>Mac画面操作 合計30分</li>
       </ul>
     </div>
-    <div class="plan pro">
+    <div class="reveal plan pro">
       <h3>Paneshell Pro <small>買い切り</small></h3>
       <ul>
         <li>無料版のすべての機能</li>
@@ -137,14 +145,14 @@
       <p class="small">月額料金はありません。</p>
     </div>
   </div>
-  <a class="btn" href="https://apps.apple.com/jp/app/paneshell-ssh-terminal/id6824497575">App Storeで入手</a>
+  <a class="btn shine" href="https://apps.apple.com/jp/app/paneshell-ssh-terminal/id6824497575">App Storeで入手</a>
 </section>
 
 <section class="en" id="en" lang="en">
   <h2>Pick up your work from your iPhone.</h2>
   <p>Paneshell is an SSH terminal for iPhone and iPad. Check on Claude Code or Codex running on your Mac or Linux server, send the next instruction, and rejoin your tmux session anytime. When you need to see the result, open your Mac screen over SSH using built-in macOS Screen Sharing.</p>
   <p>The free version includes one host, three image sends, and 30 minutes of Mac screen control. Paneshell Pro is a one-time purchase with no limits.</p>
-  <p><a class="btn" href="https://apps.apple.com/us/app/paneshell-ssh-terminal/id6824497575">View on the App Store</a></p>
+  <p><a class="btn shine" href="https://apps.apple.com/us/app/paneshell-ssh-terminal/id6824497575">View on the App Store</a></p>
   <p class="small"><a href="support/#en">Support</a> · <a href="privacy/#en">Privacy Policy</a></p>
 </section>
 
@@ -154,5 +162,6 @@
   <p class="small">© 2026 arco studio</p>
 </footer>
 
+<script src="lp.js" defer></script>
 </body>
 </html>

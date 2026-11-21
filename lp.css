@@ -10,7 +10,7 @@
   --radius: 22px;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; overflow-x: clip; }
 body {
   margin: 0;
   background: var(--bg);
@@ -109,8 +109,8 @@ p { margin: 0; overflow-wrap: anywhere; }
 .cta-note { font-size: 13px; color: var(--muted); }
 .hero-shot { display: flex; justify-content: center; position: relative; }
 .hero-shot::before {
-  content: ""; position: absolute; inset: 10% -10%;
-  background: radial-gradient(closest-side, rgba(94, 203, 167, 0.22), transparent);
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(farthest-side, rgba(94, 203, 167, 0.22), transparent);
   z-index: -1;
 }
 

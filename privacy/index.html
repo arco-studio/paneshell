@@ -12,7 +12,7 @@
 <nav class="lang">日本語 · <a href="#en">English</a></nav>
 
 <h1>プライバシーポリシー</h1>
-<p class="updated">最終更新日：2026年10月18日</p>
+<p class="updated">最終更新日：2026年11月22日</p>
 <p>Paneshell（以下「本アプリ」）は、SSH でサーバーやコンピューターに接続するための iOS アプリです。本アプリにおける利用者の情報の取り扱いについて説明します。</p>
 
 <h2>1. 収集する情報</h2>
@@ -32,6 +32,10 @@
 <p>本アプリは、利用者が設定した接続先にのみ、SSH で接続します。通信内容は SSH により暗号化されます。接続先のサーバーで取り扱われる情報については、そのサーバーの管理者の方針に従います。</p>
 <p>接続先から届いたログイン用の URL（Tailscale の認証画面など）や、ターミナル上のリンクは、開く前に URL を表示して確認したうえで、Safari で開きます。</p>
 <p>画像を送る機能では、利用者が選んだ画像を接続先の <code>~/.paneshell/images</code> に保存します（7日を過ぎたものは、次に送るときに削除します）。画面に出た画像を開く機能では、利用者が開いた画像を接続先から読み込み、表示のために端末内の一時的な場所にだけ保存します。</p>
+<p>「ファイル」から送る機能では、利用者が選んだファイルを接続先の <code>~/.paneshell/files</code> に保存します。このアプリが送ったファイルのうち7日を過ぎたものは、次にファイルを送るときに削除します。</p>
+<p>「ファイルの管理」機能（Pro）では、利用者の操作に応じて、接続先のファイルとフォルダの一覧を読み、ファイルの受け渡し・編集・名前や権限の変更を SSH で行います。プレビューや送信のために、端末内の一時的な場所にファイルを保存することがあります（設定の「キャッシュを削除」で消せます）。</p>
+<p>Mac の画面の操作では、接続先の Mac の「画面共有」に、SSH のトンネルを通して接続します。Mac に補助アプリ「Paneshell Host」を入れている場合は、画面と音声を Paneshell Host から受け取ります。Tailscale か同じネットワークで接続しているときは、画面と音声を UDP で Mac から直接受け取ることがあります。この通信は、SSH の中で受け渡した使い捨ての鍵で暗号化します。いずれも、開発者のサーバーを通しません。</p>
+<p>AI の通知を「アプリを閉じていても通知（Mac）」で受け取る場合は、Mac の Paneshell Host が、出来事の種類（承認待ち・回答の完了）、サービス名（Claude・Codex）、Mac の名前（コンピューター名とホスト名）を、利用者の iCloud のプライベートデータベースに書き込み、Apple のプッシュ通知でこの iPhone に知らせます。会話やコマンドの内容は書き込みません。このデータは利用者自身の iCloud アカウントに保存され、開発者が読むことはできません。送ったものは、新しい通知を送るときに順に削除します。</p>
 <p>接続先のプログラムが、この iPhone のクリップボードに文字をコピーすることがあります（設定でオフにできます）。コピーされた内容が本アプリの外に送信されることはありません。</p>
 
 <h2>4. アプリ内課金</h2>
@@ -50,7 +54,7 @@
 
 <section id="en" lang="en">
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: October 18, 2026</p>
+<p class="updated">Last updated: November 22, 2026</p>
 <p>Paneshell (“the App”) is an SSH client for iOS. This policy explains how the App handles your information.</p>
 
 <h2>1. Data collection</h2>
@@ -70,6 +74,10 @@
 <p>The App connects only to the hosts you configure, over SSH, which encrypts the connection. Information handled on those servers is subject to the policies of their administrators.</p>
 <p>Login URLs sent by a server (such as Tailscale authentication) and links shown in the terminal are opened in Safari after the App shows you the URL and asks for confirmation.</p>
 <p>When you send an image, it is saved on the server in <code>~/.paneshell/images</code> (images older than 7 days are deleted the next time you send one). When you open an image shown in the terminal, the App reads it from the server and keeps it only in a temporary location on your device for viewing.</p>
+<p>Files you choose in Files are saved on the server in <code>~/.paneshell/files</code> (files sent by the App that are older than 7 days are deleted the next time you send a file).</p>
+<p>The file manager (Pro) reads file and folder listings on the server and transfers, edits, renames, and changes permissions of files over SSH, only when you ask it to. Files may be kept in a temporary location on your device for previews and uploads (you can remove them with Clear Cache in Settings).</p>
+<p>Mac screen control connects to the Mac’s built-in Screen Sharing through an SSH tunnel. If the helper app Paneshell Host is installed on the Mac, the App receives the screen and sound from Paneshell Host. When you connect over Tailscale or the same network, the screen and sound may be received directly from the Mac over UDP, encrypted with a one-time key exchanged inside SSH. None of this passes through the developer’s servers.</p>
+<p>If you turn on AI notifications even when the App is closed (Mac), Paneshell Host on your Mac writes the type of event (waiting for approval or finished), the service name (Claude or Codex), and the Mac’s name (computer name and host name) to the private database of your own iCloud account, and Apple’s push notification service notifies your iPhone. The content of your conversations and commands is not written. This data is stored in your own iCloud account and cannot be read by the developer. Sent records are deleted as new notifications are sent.</p>
 <p>Programs on the server may copy text to your device’s clipboard (this can be turned off in Settings). The copied text is not sent anywhere by the App.</p>
 
 <h2>4. In-app purchases</h2>

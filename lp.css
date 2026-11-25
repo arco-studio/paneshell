@@ -137,6 +137,10 @@ main { max-width: 1080px; margin: 0 auto; padding: 40px 20px; }
 .feature p { color: #c3ccd1; }
 .feature.wide { grid-template-columns: 1fr; gap: 32px; }
 .feature.wide .feature-text { max-width: 680px; }
+.phones { display: flex; gap: 22px; justify-content: center; align-items: flex-start; }
+.phones .phone { max-width: 230px; }
+.phones .phone:nth-child(2) { margin-top: 56px; }
+.eyebrow .new { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: rgba(94, 203, 167, 0.16); border: 1px solid rgba(94, 203, 167, 0.45); font-size: 11px; letter-spacing: 0.1em; }
 .mac {
   margin: 0; border-radius: 18px; overflow: hidden;
   box-shadow: 0 0 0 1px #2c363c, 0 30px 70px rgba(0, 0, 0, 0.5);
@@ -274,6 +278,8 @@ footer { border-top: 1px solid var(--line); text-align: center; padding: 36px 20
   .feature { grid-template-columns: 1fr; gap: 32px; padding: 44px 0; }
   .feature.reverse .feature-text { order: 0; }
   .feature .phone { max-width: 240px; }
+  .phones .phone { max-width: 46%; }
+  .phones .phone:nth-child(2) { margin-top: 32px; }
   .grid, .setup ol, .plans { grid-template-columns: 1fr; }
   .macapp-card { grid-template-columns: 1fr; padding: 28px; gap: 24px; }
   .macapp-icon { justify-items: start; }

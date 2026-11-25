@@ -105,12 +105,33 @@
       <p>公開鍵・パスワード認証に対応。Tailscale経由の接続も使えます。作業フォルダは接続先を見ながら選べます。</p>
     </div>
     <div class="reveal card text-only">
-      <h3>承認待ちを音で知らせる</h3>
-      <p>Claude CodeやCodexの承認待ちや回答の完了を、音と振動でお知らせします（アプリを開いている間）。</p>
+      <h3>承認待ちを通知で知らせる</h3>
+      <p>Claude CodeやCodexの承認待ちや回答の完了をお知らせします。MacにPaneshell Hostを入れると、アプリを閉じていてもiCloud経由で通知が届きます。</p>
       <h3>テーマを選べる</h3>
       <p>見やすい標準テーマに加え、Pro ではClassicテーマも使えます。</p>
       <h3>iPadにも対応</h3>
       <p>大きな画面でペインを並べて作業できます。</p>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="reveal card text-only">
+      <h3>ターミナルでもMacの画面を小窓で</h3>
+      <p>ターミナルに切り替えても、Macの画面を隅の小窓に映し続けます。音もそのまま。大きさや位置は指で変えられます。</p>
+      <h3>ピクチャ・イン・ピクチャ</h3>
+      <p>高速モードで見ているときにアプリを離れても、Macの画面と音をiOSのピクチャ・イン・ピクチャで出し続けます。</p>
+    </div>
+    <div class="reveal card text-only">
+      <h3>Macの画面をテレビに</h3>
+      <p>AirPlayやケーブルでテレビにつなぐと、テレビにはMacの画面だけを大きく映し、iPhoneはトラックパッドになります。</p>
+      <h3>横向きに固定</h3>
+      <p>ターミナルと画面共有のメニューから、画面を横向きに固定できます。</p>
+    </div>
+    <div class="reveal card text-only">
+      <h3>ファイルの管理（Pro）</h3>
+      <p>接続先のファイルとフォルダを一覧で見て、iPhoneとの受け渡し、テキストの編集、名前や権限の変更ができます。</p>
+      <h3>ロック中のMacにもすぐログイン</h3>
+      <p>Macがロック中は英字キーボードに切り替え、打ったパスワードがすぐMacに届きます。</p>
     </div>
   </section>
 </main>
@@ -121,10 +142,12 @@
     <div class="macapp-text">
       <p class="eyebrow">Paneshell Host</p>
       <h2>Mac用アプリで、画面共有をもっと速く。</h2>
-      <p>Paneshell HostをMacに入れると、画面共有の「高速モード」が使えます。Macの画面を動画として送るので動きが滑らかになり、Macの音も聞けます。メニューバーに常駐する小さなアプリです。</p>
+      <p>Paneshell HostをMacに入れると、画面共有の「高速モード」が使えます。Macの画面を動画として送るので動きが滑らかになり、Macの音も聞けます。Claude CodeやCodexの通知を、アプリを閉じていても受け取れるようになります。メニューバーに常駐する小さなアプリです。</p>
       <ul class="macapp-points">
         <li>iPhoneのPaneshellから、画面共有のメニューでワンタップで入れられます</li>
         <li>手で入れたい場合は、下のボタンから.dmgをダウンロード</li>
+        <li>映像と音は暗号化したUDPで直接届け、モバイル通信でも途切れにくくしています（届かないときは自動でSSHに戻ります）</li>
+        <li>通知はあなたのiCloudのプライベートなデータベースを通り、送るのは出来事の種類とホスト名だけです</li>
         <li>Developer IDで署名し、Appleの公証を受けています</li>
       </ul>
       <div class="cta">
@@ -166,6 +189,7 @@
         <li>接続先の登録 無制限</li>
         <li>画像送信 無制限</li>
         <li>Mac画面操作 無制限</li>
+        <li>ファイルの管理</li>
         <li>Classicテーマ</li>
       </ul>
       <p class="small">月額料金はありません。価格は日本のApp Storeのものです。</p>

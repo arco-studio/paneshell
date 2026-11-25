@@ -105,12 +105,33 @@
       <p>Public key and password authentication, with Tailscale connections supported. Pick a working folder while browsing your host.</p>
     </div>
     <div class="reveal card text-only">
-      <h3>Hear when it needs you</h3>
-      <p>A sound and vibration let you know when Claude Code or Codex is waiting for approval or has finished (while the app is open).</p>
+      <h3>Know when it needs you</h3>
+      <p>Get notified when Claude Code or Codex is waiting for approval or has finished. With Paneshell Host on your Mac, notifications arrive through iCloud even when the app is closed.</p>
       <h3>Themes</h3>
       <p>A clear default theme, plus Classic themes with Pro.</p>
       <h3>Made for iPad, too</h3>
       <p>Lay out panes side by side on the larger screen.</p>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="reveal card text-only">
+      <h3>Mini window in the terminal</h3>
+      <p>Switch to the terminal and your Mac screen stays in a corner window, with sound. Drag and resize it with your fingers.</p>
+      <h3>Picture in Picture</h3>
+      <p>Leave the app while watching in Fast mode, and your Mac screen and sound keep playing in iOS Picture in Picture.</p>
+    </div>
+    <div class="reveal card text-only">
+      <h3>Mac screen on your TV</h3>
+      <p>Connect to a TV with AirPlay or a cable to show just your Mac screen, large, while your iPhone becomes a trackpad.</p>
+      <h3>Lock Landscape</h3>
+      <p>Lock the screen in landscape from the terminal or screen sharing menu.</p>
+    </div>
+    <div class="reveal card text-only">
+      <h3>File manager (Pro)</h3>
+      <p>Browse files and folders on your server, move them to and from your iPhone, edit text, and change names and permissions.</p>
+      <h3>Unlock your Mac quickly</h3>
+      <p>While your Mac is locked, the keyboard switches to English letters so your password reaches the Mac right away.</p>
     </div>
   </section>
 </main>
@@ -121,10 +142,12 @@
     <div class="macapp-text">
       <p class="eyebrow">Paneshell Host</p>
       <h2>Faster screen sharing with the Mac app.</h2>
-      <p>Install Paneshell Host on your Mac to unlock Fast mode for screen sharing. Your Mac screen streams as video for smoother motion, and you can hear your Mac’s audio too. It’s a small app that lives in the menu bar.</p>
+      <p>Install Paneshell Host on your Mac to unlock Fast mode for screen sharing. Your Mac screen streams as video for smoother motion, and you can hear your Mac’s audio too. It also lets Claude Code and Codex notifications reach you even when the app is closed. It’s a small app that lives in the menu bar.</p>
       <ul class="macapp-points">
         <li>Install it with one tap from the screen sharing menu in Paneshell on your iPhone</li>
         <li>Prefer to install it yourself? Download the .dmg below</li>
+        <li>Video and audio travel directly over encrypted UDP, so they hold up on cellular (falls back to SSH automatically if UDP can’t get through)</li>
+        <li>Notifications go through your private iCloud database, and only the event type and host name are sent</li>
         <li>Signed with Developer ID and notarized by Apple</li>
       </ul>
       <div class="cta">
@@ -166,6 +189,7 @@
         <li>Unlimited hosts</li>
         <li>Unlimited image sends</li>
         <li>Unlimited Mac screen control</li>
+        <li>File manager</li>
         <li>Classic themes</li>
       </ul>
       <p class="small">No subscription. U.S. App Store price; prices vary by region.</p>
